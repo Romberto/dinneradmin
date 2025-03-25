@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start":		"concurrently \"npm run server\" \"npm run dev\"",
+    "server": "json-server --watch db.json", 
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -11,9 +13,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.15"
+    
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
