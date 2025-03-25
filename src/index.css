@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@layer components {
+  header {
+    @apply bg-orange-500 min-w-3xs h-18 w-full text-white px-2 py-1 grid grid-cols-2 auto-rows-auto items-center fixed top-0 left-0;
+  }
+  .container{
+    @apply pt-20 px-1
+  }
+  .btn-orange{
+    @apply w-full px-3 py-3 border-2 rounded-md inline-block transition justify-items-center items-center  bg-orange-500 text-white font-bold text-xl active:bg-amber-700 hover:bg-amber-600
+  }
+}
