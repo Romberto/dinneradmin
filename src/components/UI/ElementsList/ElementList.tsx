@@ -6,20 +6,19 @@ import { useGetProductsQuery } from "../../../servises/product";
 
 // компонент для списка всех элементов в категории
 
-export const ElementsList: React.FC<{ queryType: string }> = ({
+export const ElementsList: React.FC<{ queryType: "category" | "product"}> = ({
   queryType,
 }) => {
   let data;
   let isLoading;
   let isError;
   if (queryType === "category") {
-    console.log('frfr')
     const result = useGetCategoriesQuery(undefined);
     data = result.data;
-    console.log(data)
     isLoading = result.isLoading;
     isError = result.isError;
   } else if (queryType === "product") {
+    console.log('product')
     const result = useGetProductsQuery(undefined);
     data = result.data;
     isLoading = result.isLoading;

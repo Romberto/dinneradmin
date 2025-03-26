@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="admin/" element={<Admin />}></Route>
         <Route path="category/" element={<ElementsList queryType={'category'}/>}></Route>
+        <Route path="product/" element={<ElementsList queryType={'product'}/>}></Route>
         <Route path="*" element={<p>not fond path</p>}></Route>
       </Routes>
     </>
