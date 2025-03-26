@@ -1,14 +1,12 @@
-import React from 'react';
-import plus from '../../../assets/plus_icon.svg'
-import { Link } from "react-router-dom";
+import React from "react";
+import { Toolbar } from "../../UI/Toolbar/Toolbar";
 
 export const Admin: React.FC = () => {
   return (
-    <div className='container'>
-        <div className='grid grid-cols-6 gap-1'>
-          <Link to="/category" className='btn-orange col-span-4'>категории</Link>
-          <button className='btn-orange col-span-2'><img src={plus} alt="plus" className='w-4'/></button>
-        </div>
+    <div className="container">
+      <ul className="flex flex-col w-full">
+        <Toolbar path={'/category'} name={'категории'}/>
+      </ul>
     </div>
   );
 };

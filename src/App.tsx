@@ -1,6 +1,6 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { Admin } from "./components/page/Admin/Admin";
-import { Category } from "./components/UI/Category/Category";
+import { ElementsList } from "./components/UI/ElementsList/ElementList";
 import home from '../src/assets/home.svg'
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       </header>
       <Routes>
         <Route path="admin/" element={<Admin />}></Route>
-        <Route path="category/" element={<Category />}></Route>
+        <Route path="category/" element={<ElementsList queryType={'category'}/>}></Route>
         <Route path="*" element={<p>not fond path</p>}></Route>
       </Routes>
     </>
