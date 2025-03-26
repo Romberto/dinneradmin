@@ -1,7 +1,16 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { categoryApi } from '../servises/category';
+import { productApi } from '../servises/product';
+
+const rootReducer = combineReducers({
+    [categoryApi.reducerPath]: categoryApi.reducer,
+    [productApi.reducerPath]: productApi.reducer
+  });
 
 export const store = configureStore({
-  reducer: {},
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(categoryApi.middleware).concat(productApi.middleware),
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
