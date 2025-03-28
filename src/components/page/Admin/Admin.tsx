@@ -1,13 +1,18 @@
 import React from "react";
-import { Toolbar } from "../../UI/Toolbar/Toolbar";
+import { Link } from "react-router-dom";
 
 export const Admin: React.FC = () => {
   return (
     <div className="container">
-      <ul className="flex flex-col w-full">
-        <Toolbar path={'/category'} name={'категории'}/>
-        <Toolbar path={'/product'} name={'блюда'}/>
-      </ul>
+      <nav className="flex flex-col w-full">
+        <Link className="btn btn-orange" to="menu">
+          Open Menu
+        </Link>
+
+        <Link className="btn btn-orange" to="staff">
+          Open Staff
+        </Link>
+      </nav>
     </div>
   );
 };

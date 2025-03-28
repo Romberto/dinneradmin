@@ -4,6 +4,6 @@ export type ItemT = {
 };
 
 export type ToolbarT = {
-  path: '/category'| '/product';
+  path: 'menu'| 'staff';
   name: string;
 };

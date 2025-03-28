@@ -6,7 +6,10 @@
   .container{
     @apply pt-20 px-1 m-auto
   }
+  .btn{
+    @apply w-full text-xl px-3 py-3 border-2 rounded-md inline-block transition justify-items-center items-center font-bold 
+  }
   .btn-orange{
-    @apply w-full px-3 py-3 border-2 rounded-md inline-block transition justify-items-center items-center  bg-orange-500 text-white font-bold text-xl active:bg-amber-700 hover:bg-amber-600
+    @apply bg-orange-500 text-white   active:bg-amber-700 hover:bg-amber-600
   }
 }

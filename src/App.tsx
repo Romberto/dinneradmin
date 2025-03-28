@@ -1,21 +1,25 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Outlet, Route, Routes } from "react-router";
+import home from "../src/assets/home.svg";
 import { Admin } from "./components/page/Admin/Admin";
-import { ElementsList } from "./components/UI/ElementsList/ElementList";
-import home from '../src/assets/home.svg'
+import { Menu } from "./components/page/Menu/Menu";
+
 function App() {
   return (
     <>
       <header>
         <p>Logo</p>
-        <Link to="/admin" className="justify-self-end">
-          <img src={home} alt="дом - иконка возвращения домой" className="w-8"/>
+        <Link to="/" className="justify-self-end">
+          <img
+            src={home}
+            alt="дом - иконка возвращения домой"
+            className="w-8"
+          />
         </Link>
       </header>
       <Routes>
-        <Route path="admin/" element={<Admin />}></Route>
-        <Route path="category/" element={<ElementsList queryType={'category'}/>}></Route>
-        <Route path="product/" element={<ElementsList queryType={'product'}/>}></Route>
-        <Route path="*" element={<p>not fond path</p>}></Route>
+        <Route path="/" element={<Admin/>}></Route>
+        <Route path="/menu" element={<Menu/>}></Route>
+        <Route path='*' element={<div className="container"><p>path not fond</p></div>}></Route>
       </Routes>
     </>
   );
