@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -21,7 +21,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Вы можете также сохранить ошибку в журнале ошибок или отправить её на сервер
-    console.error('Ошибка поймана в ErrorBoundary:', error, errorInfo);
+    console.error("Ошибка поймана в ErrorBoundary:", error, errorInfo);
   }
 
   render() {

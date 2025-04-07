@@ -20,3 +20,12 @@ export type ProductT = {
 export type FetchResultT = {
   [key: string]: ProductT[];
 }
+export type CategoryFormModalProps = {
+
+  onClose: () => void;
+  children?: React.ReactNode
+}
+export type InputT = {
+  category: string
+}
+

@@ -20,6 +20,7 @@ function App() {
             className="w-8"
           />
         </Link>
+        <div id="root-modal"></div>
       </header>
       <Routes>
         <Route path="/" element={<Admin />}></Route>
@@ -33,6 +34,7 @@ function App() {
           }
         ></Route>
       </Routes>
+      
     </>
   );
 }
